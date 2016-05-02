@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
           @Override public void call(StackAnswers stackAnswers) {
             items = stackAnswers.getItems();
             Log.i(getClass().getSimpleName(), "I know I'm crazy but come on");
-            swap(items);
+            answersAdapter.swapList(items);
           }
         }, new Action1<Throwable>() {
           @Override public void call(Throwable throwable) {
@@ -57,9 +57,5 @@ public class MainActivity extends AppCompatActivity {
           }
         });
 
-  }
-
-  protected void swap(List<StackAnswers.Item> items){
-    answersAdapter.swapList(items);
   }
 }
