@@ -31,11 +31,12 @@ public class AnswersAdapter extends RecyclerView.Adapter<AnswersAdapter.ViewHold
 
     holder.user.setText(item.getOwner().getName());
     holder.isAccepted.setText(String.valueOf(item.getAccepted()));
-    holder.score.setText(item.getScore());
+    holder.score.setText(String.valueOf(item.getScore()));
   }
 
   @Override public int getItemCount() {
-    return 0;
+    if (items == null) return -1;
+    return items.size();
   }
 
   public static class ViewHolder extends RecyclerView.ViewHolder {

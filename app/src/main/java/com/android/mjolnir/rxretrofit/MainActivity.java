@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         .subscribe(new Action1<StackAnswers>() {
           @Override public void call(StackAnswers stackAnswers) {
             items = stackAnswers.getItems();
-            Log.i(getClass().getSimpleName(), "I know I'm crazy but come on");
             answersAdapter.swapList(items);
           }
         }, new Action1<Throwable>() {
