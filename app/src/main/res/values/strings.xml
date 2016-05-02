@@ -1,0 +1,4 @@
+<resources>
+  <string name="app_name">RxRetrofit</string>
+  <string name="API_BASE_URL">https://api.stackexchange.com/2.2/</string>
+</resources>
